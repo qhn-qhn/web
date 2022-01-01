@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 在ie7中使用JSON，需要引入JS文件:json2.js -->
+    <script src="./json2.js"></script>
+    <title>Document</title>
+    <script>
+        /**JSON
+         *  -JS中对象只有JS认识，其他语言不认识
+         *  -JSON是一个特殊格式的字符串，这个字符串可以被任何语言所识别
+         *      并且可以转换为任意语言中的对象，JSON在开发中主要用来数据的交互
+         *  -JSON
+         *      Javascript Object Notation Js对象表示法
+         *      JSON格式于JS对象格式一样，只不过JSON字符串中的属性名必须加双引号，其他和JS一致
+         *  -JSON分类：
+         *      1、对象{}
+         *      2、数组[]
+         *  -JSON允许的值：
+         *      1、字符串
+         *      2、数值
+         *      3、布尔值
+         *      4、null
+         *      5、对象
+         *      6、数组
+         * */
+        
+        var obj = '{"name":"孙悟空","age":18}';
+        var obsj = '[1,2,3,"d"]';
+
+        /**将JSON字符串转换为对象
+         *      在JS中，提供了一个工具类，为JSON
+         *      这个对象可以将一个JSON转换为JS对象，也可以将一个JS对象转换为JSON
+         *      参数为一个JSON字符串，返回JS对象
+         * */
+
+        /**
+         * JSON.parse()
+         *  可以将JSON字符串转换为JS对象    
+         * */
+        var end = JSON.parse(obj);
+        console.log(end.name);
+
+        //JSON.stringify()
+        //      可以将JS对象转换为JSOn字符串
+        //      参数为一个JS对象，返回JSON字符串
+        var ends = JSON.stringify(end);
+        console.log(typeof ends);
+
+        //JSON在ie7及以下不支持
+        //eval()  这个函数可以用来执行一段字符串形式的代码，并将结果返回
+        var str2 = "alert(3);"
+        eval(str2);
+        //如果使用eval()执行的字符串中含有{}，他会将{}当成代码块
+        //      如果不希望将其当成代码块，则需要在字符串后各加一个()
+        //      此函数功能很大，但是在开发中尽量不要使用，具有安全隐患
+        var obaj = '{"name":[1,2,3]}';
+        var a = eval("(" + obaj + ")");
+        console.log(a);
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

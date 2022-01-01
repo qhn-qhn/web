@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            width: 100px;
+            height: 100px;
+            /* radial-gradient （大小 at 位置，颜色，颜色）径向渐变，像死猪渐变 
+                    默认情况下渐变的形状根据元素来计算
+                        手动指定径向渐变的大小
+                        大小：circle正圆
+                              ellipse 椭圆
+                              closet-side 近边为半径
+                              farthest-side 远边
+                              closet-corner 近角
+                              farthest-corner 远角
+
+                        也可以指定渐变的位置*/
+            background-image: radial-gradient(skyblue,pink);
+           
+        }
+        .b2{
+            width: 100px;
+            height: 100px;
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <div class="b2"></div>
+</body>
+</html>

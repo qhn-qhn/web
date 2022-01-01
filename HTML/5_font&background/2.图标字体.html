@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/fontawesome-free-5.11.2-web/css/all.css">
+    <style>
+        li{
+            list-style: none;
+        }
+        li::before{
+            content:"\f1b0";
+            /* 引入图标使用的字体，在all.css里边查找 */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900; 
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 类名为：class="fab 图标名"
+                class="fas 图标" -->
+    <i class="fas fa-bell"></i>
+    <!-- 通过实体来设置 -->
+    <span class="fa ">&#xf0f3;</span>
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+</body>
+</html>

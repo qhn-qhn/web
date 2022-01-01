@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 浏览器加载页面是，按照自上而下的顺序执行，如果将js代码写在上边，在代码执行时，页面还没有加载 -->
+    <script>
+        // onload会在页面加载完之后才会触发,这样可以确保代码执行时DOM对象已经加载完成
+        window.onload = function(){
+            //获取按钮
+            var btn = document.getElementById('btn');
+             //绑定一个单击事件，这个函数为单击响应函数
+            btn.onclick = function(){
+            alert('哈哈')
+            }
+        };
+    </script>
+</head>
+<body>
+    
+
+    <button id="btn" >我是一个按钮</button>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        替换元素
+
+        音视频默认情况不允许用户自己控制
+
+        <audio> 音频文件 ie8不支持
+            src：路径
+            controls:是否允许用户控制
+            autoplay：自动播放 （一般不播放）
+            loop：循环播放
+     -->
+    <audio src="" controls autoplay></audio>
+    <!-- 除了通过src指定文件路径还可以用source  支持显示音频，ie8不支持时提醒 
+        可以同时加多个source，防止浏览器不支持某个音频格式
+    -->
+    <audio controls>
+        您的浏览器不支持
+        <source src="">
+    </audio>
+
+    <!-- ie8支持
+        <embed> 基本所有浏览器都支持  默认自动播放 需要指定大小
+            type:文件类型
+                audio/mp3
+        可以把此标签放在audio中，使所有浏览器可以根据支持标签来播放相关文件
+    -->
+    <embed src="" width="" height="" type="">
+
+    <audio controls>
+        
+        <source src="">
+        <embed src="" width="" height="" type="">
+    </audio>
+
+
+    <!-- 
+        video：引入视频文件
+            src:文件路径
+     -->
+     <video src="">
+
+     </video>
+     <!-- 
+         ie8 不支持时，与audio方法相同
+      -->
+      <video controls>
+          <source src="" type="">
+      </video>
+</body>
+</html>

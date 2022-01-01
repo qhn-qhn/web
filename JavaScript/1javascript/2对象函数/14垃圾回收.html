@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 垃圾回收
+        //     程序运行过程中会产生垃圾，需要一个垃圾回收机制，来处理程序运行过程中的垃圾
+
+        // 当一个对象没有任何变量或属性对他进行引用，此时将永远无法操作该对象，此对象就是垃圾
+        // 在JS有自动垃圾回收机制，会自动将这些垃圾对象从内存中销毁
+
+        var obj = new Object();
+        // 将不在使用的对象设置为null，时js垃圾回收机制将垃圾回收
+        obj = null;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

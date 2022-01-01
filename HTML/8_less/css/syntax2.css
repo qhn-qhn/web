@@ -1,0 +1,19 @@
+.b1,
+.b2 {
+  width: 100px;
+  height: 100px;
+}
+.b2 {
+  color: pink;
+}
+.b3 {
+  width: 100px;
+  height: 100px;
+}
+.b5 {
+  color: pink;
+}
+div {
+  width: 100px;
+}
+/*# sourceMappingURL=./syntax2.css.map */

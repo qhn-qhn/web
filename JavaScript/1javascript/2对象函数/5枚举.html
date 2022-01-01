@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 枚举对象的属性
+                // 使用for...in语句
+                //     语法：for(var 变量 in 对象){}
+                //  for--in中 对象有几个属性，循环体就会执行几次
+                        // 每次执行时，会将对象中的一个属性的名字赋值给变量
+        for(var a in document){
+            document.write("属性名"+a+"\t"+"属性值"+document[a]+"<br>");
+        }
+
+        // var关键字声明的变量，会在所有的代码执行之前被声明，但是不会赋值
+        //     但是如果不适用var关键字，则变量不会被提前声明
+
+        // 使用函数声明形式创建的函数function 函数名（）{}，会在所有代码之前被执行
+        //     使用var 函数名 = function{}  不会被提前声明
+
+
+        // 函数作用域
+        //     在函数作用域操作一个变量，他会现在自身作用域中查找，如果有直接使用
+        //         如果没有，就去上一级找，直到找到全局作用域
+        //         如果全局作用域中依然没有， 则会报错ReferenceError
+            // 访问全局作用域的变量，使用windo.属性名
+            // 函数中不适用var声明变量的，则指全局作用域变量
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .outer{
+            background-color: #bbffaa;
+            /* 默认情况下父元素被子元素撑开 */
+        }
+
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color:darkgoldenrod ;
+            margin-bottom: 10px;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: darkorange;
+            /* 若子元素高度超过父元素，则会溢出需要overflow处理
+                overflow:visable 默认值 子元素从父元素一处
+                         hidden 溢出内容会被裁剪不会显示
+                         scroll 生成滚动条，通过滚动条查看内容生成垂直和水平方向滚动条
+                         auto 根据需要生成滚动条
+                overflow-x:单独处理水平
+                overflow-y:单独处理垂直
+             */
+
+            overflow: auto;
+        }
+        .box2{
+            width: 100px;
+            height: 300px;
+            background-color: darkseagreen;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+
+    <div class="box1">
+        <div class="box2">
+            
+        </div>
+    </div>
+
+</body>
+</html>

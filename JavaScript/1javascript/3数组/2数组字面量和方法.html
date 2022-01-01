@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 使用字面量创建数组
+        var arr = [1,2,3];
+        document.write(arr+"<br>");
+        //使用构造函数创建数组
+        var arr2 = new Array(1,1,1,);
+        document.write(arr2+"<br>");
+        //表示创建长度为10的数组
+        arr2=new Array(10);
+
+        // push()向数组末尾添加元素，并返回数组新长度
+        var a = arr.push(3,4,5);
+        document.write(a+"\t"+arr+"<br>");
+
+        //pop删除数组的最后一个元素,并返回删除元素
+        var b = arr.pop();
+        document.write(b+"\t"+arr+"<br>");
+
+        // unshift()向数组开头添加元素，并返回长度
+        var c = arr.unshift(999);
+        document.write(c+"\t"+arr+"<br>");
+
+        //shift()删除第一个元素并返回
+        var d = arr.shift();
+        document.write(d+"\t"+arr+"<br>");
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

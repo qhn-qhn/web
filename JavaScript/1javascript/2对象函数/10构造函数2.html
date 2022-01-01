@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 在Person函数中，为每一个对象都添加了sayneme方法
+        //     此方法在构造函数内幕创建，每次执行此构造函数都会创建一个新的sayname方法
+        //         即所有实例的sayname方法都死唯一的
+        //             极大的浪费了空间
+         function Person(name){
+            this.name = name;
+            this.sayname = fun;
+         }
+        // 解决方法：将此方法在全局作用域中声明
+        // 缺点：将函数定义在全局作用域中，污染了全局作用域的命名空间
+        //  而且定义在全局作用域中也很不安全
+        function fun(){
+            alert(this.name);
+        }
+        var per = new Person("hahaha");
+        per.sayname();
+
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .b1{
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+            margin-left: 0px;
+        }
+        .b1 div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        .b2{
+            background-color: skyblue;
+            /* transition过度
+                    通过过渡可以指定一个属性发生变化时的切换方式
+                    */
+
+            /* transition-property    指定过渡的属性   多个属性逗号隔开  大部分属性都课使用固定  过渡时必须是一个有效值像另外一个有效值过渡*/
+            transition-property: all;
+            /* transition-duration    指定过度的时间    单位：s  ms       可分别指定时间*/
+            transition-duration: 2s;
+            /* transition-timing-function      过渡的时序函数    指定动画过渡的方式 
+                    ease   默认值  慢速开始，先加速，在减速
+                    linear  匀速
+                    ease-in  加速
+                    ease-out 减速
+                    ease-in-out 先加速后减速
+                    cubic-bezier 未指定时序函数
+                            https://cubic-bezier.com  所需值可在此网站查找
+                    steps（） 分步执行过渡（时间，开始的时间（star end））
+                            默认值end
+                            star*/
+            transition-timing-function: cubic-bezier(0,1.3,1,-0.89);
+            /* transition-delay: 过渡效果的延迟 */
+            transition-delay: 2s;
+            /* 简写transition 如果要写延迟，则第二个时间表示延迟 */
+
+        }
+        .b3{
+            background-color: orange;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .b1:hover div{
+            /* width: 200px;
+            height: 200px; */
+            margin-left: 700px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="b1">
+        <div class="b2"></div>
+        <div class="b3"></div>
+    </div>
+</body>
+</html>

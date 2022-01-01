@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: orchid;
+            /* border边框会改变其他元素位置，
+            outline表示轮廓，和boeder用法相同，不会改变 */
+            /* border: red 10px solid; */
+            outline: red 10px solid;
+            /*改变width和height的计算方式
+                content-box表示盒子的内容的大小
+                border-box表示盒子可见框的大小
+            */
+            box-sizing:border-box ;
+
+            /* box-shadow设置元素的阴影，不会影响布局 
+                水平 垂直 模糊度 颜色
+            */
+            box-shadow: 10px 10px 20px orange;
+
+            /* border-radius设置圆角 */
+            /* border-radius:值/值表示每个角的形状 */
+            border-radius: 20px 30px;
+            border-top-left-radius: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <span>hello</span>
+</body>
+</html>

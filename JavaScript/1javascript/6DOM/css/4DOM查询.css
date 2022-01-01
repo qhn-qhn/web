@@ -1,0 +1,35 @@
+.test {
+  display: flex;
+}
+.test #total .inner:first-of-type {
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+}
+.test #total .inner:first-of-type p {
+  margin: 5px;
+}
+.test #total .inner:first-of-type ul {
+  display: flex;
+}
+.test #total .inner:first-of-type ul li {
+  background-color: rgba(46, 182, 5, 0.61);
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px;
+}
+.test #total .inner:last-of-type {
+  width: 380px;
+  height: 60px;
+  border: 1px solid black;
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+}
+.test #btnList div {
+  margin: 10px;
+}
+.test #btnList div button {
+  width: 300px;
+}
+/*# sourceMappingURL=./4DOM查询.css.map */

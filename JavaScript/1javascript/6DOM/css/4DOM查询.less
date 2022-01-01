@@ -1,0 +1,38 @@
+.test{
+    display: flex;
+    #total{
+        & .inner:first-of-type{
+            width:400px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 10px 10px 10px 10px; 
+            p{
+                margin: 5px;
+            }
+            ul{
+                display: flex;
+                li{
+                    background-color: rgba(46, 182, 5, 0.61);
+                    border: 1px solid black;
+                    padding: 5px;
+                    margin: 10px;
+                }
+            }
+        }
+        & .inner:last-of-type{
+            width:380px;
+            height: 60px;
+            border: 1px solid black;
+            margin: 0px 10px 10px 10px;
+            padding: 10px;
+        }   
+    }
+    #btnList{
+        div{
+            margin: 10px;
+            button{
+                width: 300px;
+            }
+        }
+    }
+}

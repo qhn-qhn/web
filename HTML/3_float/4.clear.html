@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+        .box2{
+            width: 100px;
+            height: 200px;
+            background-color: #bbffaa;
+            float:right
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color:skyblue;
+            /* box1浮动，导致box3上移，位置发生改变
+                可通过clear清除浮动元素对当前元素的影响
+                    left 清除左侧浮动元素的影响
+                    righ 清除右侧浮动元素的影响 
+                    both 清除两侧最大影响*/
+            clear:both; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

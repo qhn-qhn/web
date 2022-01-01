@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 50%;
+            border: 1px pink solid;
+            margin: 100px auto;
+
+            /* border-spacing:指定边框的距离 */
+            border-spacing: 0px;
+            /* 合并边框 */
+            border-collapse: collapse;
+
+        }
+        td{
+            border: 1px solid black;
+            /* 默认情况垂直居中 
+            使用vertical-align  使用middle*/
+            vertical-align: center;
+            text-align: center;
+        }
+        tr:nth-child(even){
+            background-color: pink;
+        }
+
+        /* 如果表格没有使用tbody，则浏览器自动创建tbody 并且将tr放进tbody
+            所以tr是tbody的子元素 */
+        tr:nth-child(odd){
+            background-color: skyblue;
+        }
+        .b1{
+            width: 300px;
+            height: 300px;
+            background-color: #bbffaa;
+            /* 将元素设置为单元格 */
+            display: table-cell;
+
+            /* 垂直 */
+            vertical-align: middle;
+        }
+        .b2{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="b1">
+        <div class="b2"></div>
+    </div>
+    <table>
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>唐僧</td>
+            <td>男</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>孙悟空</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>猪八戒</td>
+            <td>22</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>沙僧</td>
+            <td>33</td>
+            <td>12</td>
+        </tr>
+    </table>
+</body>
+
+</html>

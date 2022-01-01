@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn01">点我一下</button>
+    <button id="btn02">点我一下2</button>
+    <br><br>
+    <div id="box1"></div>
+
+<!-- 点击按钮后修改大小 -->
+<!-- 
+    通过Js修改元素样式：
+        元素.style.样式名 = '样式值'
+    注意:如果Css的样式名中有-，这种名称在JS不合法，比如：background-color
+        需要将这种名称修改为驼峰命名法：backgrounColor
+    这种方式修改的是内联样式，会优先显示
+    但是如果在CSS样式表中使用了！important，JS代码将不会生效
+ -->
+    <script>
+        var box1 = document.getElementById("box1");
+
+        var btn01 = document.getElementById("btn01");
+        btn01.onclick = function(){
+            box1.style.height = "100px";
+            box1.style.backgroundColor = "skyblue";
+        };
+
+        //点击按钮2以后读取元素样式
+        /*通过style属性读取的都是内联样式
+        */
+        var btn02 = document.getElementById("btn02");
+        btn02.onclick = function(){
+            alert(box1.style.height);
+        };
+    </script>
+</body>
+</html>

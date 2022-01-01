@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+        }
+        .b1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* 定位（position）
+                使用position属性值设置定位、
+                    static 默认值 元素静止没有开启定位
+                    relative 相对定位
+                    absolate 绝对定位
+                    fixed 元素的固定定位
+                    stickly 元素的粘滞定位
+            相对定位：需要设置偏移量
+                     参照与元素在文档流中的位置进行定位
+                     相对定位提高元素的层次
+                     不会是元素脱离文档流，不会改变元素的性质
+            
+            偏移量，开启相对定位后，通过设置偏移量改变元素的位置
+                    top
+                    bottom
+                    left
+                    right
+                 */
+        .b2{
+            width: 100px;
+            height: 100px;
+            background-color:skyblue;
+            position: relative;
+            top: -100px;
+            left: 100px;
+        }
+        .b3{
+            width: 100px;
+            height: 100px;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="b1">1</div>
+    <div class="b2">2</div>
+    <div class="b3">3</div>
+</body>
+</html>

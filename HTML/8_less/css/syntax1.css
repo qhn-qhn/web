@@ -1,0 +1,29 @@
+/*多行注释，内容会被解析到css*/
+.b1 {
+  background-color: pink;
+}
+.b1 .b2 {
+  background-color: skyblue;
+}
+.b1 .b3 {
+  background-color: yellow;
+}
+.b4 {
+  width: 100px;
+}
+.b5 {
+  width: 100px;
+}
+.b6 {
+  width: 100px;
+  height: 100px;
+}
+.b8 .b9 {
+  width: 100px;
+}
+.b8 > .b10 {
+  width: b5;
+}
+.b8:hover {
+  color: pink;
+}

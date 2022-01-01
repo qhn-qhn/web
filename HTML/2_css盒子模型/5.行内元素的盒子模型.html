@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1{
+/* 行内元素的盒子模型不支持设置宽度和高度  
+    内边距padding支持,但是垂直方向不会影响页面的布局
+    边框border，外边距margin同上
+    超链接是行内元素
+*/
+            background-color: sandybrown;
+            /* padding: 100px; */
+            /* border: 20px olive solid; */
+        }
+        a{
+            /* display用来设置元素的显示类型，可选值：
+                inline 将元素设置为行内元素
+                block 将元素设置为块元素 
+                inline-block 将元素设置为行内块元素
+                table 将元素设置为表格
+                none 元素不在页面显示，所在位置消失*/
+            /* visibil 用来色荷治元素的显示状态，可选值：
+                 visib 默认值 元素在页面正常显示
+                 hidden 元素在页面中隐藏，不显示，但是所在位置不消失
+             */
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="javascript">超链接</a>
+    <span class="s1">1111</span>
+    <div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        .cube{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            /* 显示3D效果 */
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateZ(45deg);
+
+            animation: rotate 15s linear infinite ;
+        }
+        .cube > div{
+            width: 200px;
+            height: 200px;
+            /* 为元素设置透明效果 */
+            opacity:0.7;
+
+            position: absolute;
+        }
+        img{
+            vertical-align: top;
+        }
+        .b1 {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .b2 {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .b3 {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .b4 {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .b5 {
+            transform:rotateY(-180deg) translateZ(100px);
+        }
+        .b6 {
+            transform:  translateZ(100px);
+        }
+
+        @keyframes rotate {
+            from{
+                transform:rotateX(0) rotateZ(0) ; 
+            }
+            to{
+                transform: rotateX(1turn) rotateZ(1turn);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建外部容器 -->
+    <div class="cube">
+        <!-- 引入图片 -->
+        <div class="b1">
+            <img src="./img/1.jpg">
+        </div>
+        <div class="b2">
+            <img src="./img/2.jpg">
+        </div>
+        <div class="b3">
+            <img src="./img/3.jpg" >
+        </div>
+        <div class="b4">
+            <img src="./img/4.jpg" >
+        </div>
+        <div class="b5">
+            <img src="./img/5.jpg" >
+        </div>
+        <div class="b6">
+            <img src="./img/6.jpg" >
+        </div>
+    </div>
+</body>
+</html>

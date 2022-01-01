@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 事件：用户和浏览器之间的交互行为
+            处理事件：可以在时间的属性中设置一些js代码，这样当时间被触发时，这些代码将会执行 -->
+            <!-- 这种写法称为结构和行为耦合，不方便维护 -->
+    <!-- <button id="btn" onclick="alert('哈哈')">我是一个按钮</button> -->
+    <button id="btn" >我是一个按钮</button>
+    <script>
+        //获取按钮
+        var btn = document.getElementById('btn');
+        //为按钮的对应事件绑定处理函数的形式来响应事件，事件被触发时其对应的函数会被调用
+        //绑定一个单击事件，这个函数为单击响应函数
+        btn.onclick = function(){
+            alert('哈哈')
+        }
+    </script>
+</body>
+</html>

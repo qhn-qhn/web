@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+        }
+        .b1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .b2{
+            width: 100px;
+            height: 100px;
+            background-color:skyblue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+           
+        }
+        /* 绝对定位absolute
+                开启绝对定位后，不设置偏移量元素的位置不会发生变化
+                元素会从文档流脱离
+                改变元素的性质：行内变成块，块的宽度被内容撑开
+                提升元素层级
+                绝对定位元素相对于其包含块改变位置
+            
+            包含块（content block）
+                正常情况
+                    离当前元素最近的祖先块元素
+                开启绝对定位
+                    离当前元素最近的开启定位的祖先元素
+                    若所有的祖先元素都没有开启，则根元素是他的包含块
+         */
+        .b3{
+            width: 100px;
+            height: 100px;
+            background-color:yellow;
+        }
+        .b4{
+            width: 400px;
+            height: 400px;
+            background-color:goldenrod;
+        }
+        .b5{
+            width: 300px;
+            height: 300px;
+            background-color:gainsboro;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="b1">1</div>
+    <div class="b4">4
+        <div class="b5">5
+            <div class="b2">2</div>
+        </div>
+    </div>
+    
+    <div class="b3">3</div>
+</body>
+</html>

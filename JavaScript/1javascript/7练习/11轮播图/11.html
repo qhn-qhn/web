@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../10定时器的应用/js/12.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            width: 520px;
+            height: 333px;
+            margin: 50px auto;
+            background-color: skyblue;
+            padding: 5px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #imgList {
+            width: 2600px;
+            list-style: none;
+            position: absolute;
+            left: 0px;
+        }
+
+        #imgList li {
+            float: left;
+            margin: 0 10px;
+        }
+
+        #navDiv {
+            position: absolute;
+            bottom: 15px;
+            /* left: 197px; */
+        }
+
+        #navDiv a {
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            margin: 0 5px;
+            opacity: 0.4;
+            /* 兼容ie8 */
+            filter: alpha(opacity=40);
+        }
+
+        #navDiv a:hover {
+            background-color: black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var imgList = document.getElementById("imgList");
+
+            //获取页面的img标签
+            var imgArr = document.getElementsByTagName("img");
+            //设置imgList宽度
+            imgList.style.width = 520 * imgArr.length + "px";
+
+            // 设置导航按钮居中
+            var navDiv = document.getElementById("navDiv");
+            var outer = document.getElementById("outer");
+            navDiv.style.left = (outer.offsetWidth - navDiv.offsetWidth) / 2 + "px";
+
+            var index = 0;
+            //获取所有a
+            var allA = document.getElementsByTagName("a");
+            allA[index].style.backgroundColor = "black";
+            
+            //点击超链接切换图片
+            for (var i = 0; i < allA.length; i++) {
+                allA[i].num = i;
+                allA[i].onclick = function () {
+                    clearInterval(timer);
+                    //获取超链接索引
+                    index = this.num;
+                    //修改选中的a
+                    setA();
+                    //切换图片
+                    move(imgList, "left", -520 * index, 20, function () {
+                        autoChange();
+                    });
+                    
+                };
+            }
+
+            //自动切换图片
+            autoChange();
+
+            //设置选中的a
+            function setA() {
+                //判断当前索引是否使最后一张图片
+                if(index >= imgArr.length -1){
+                    index=0;
+                    imgList.style.left = 0;
+                }
+                //遍历所有a设置为红色
+                for (var i = 0; i < allA.length; i++) {
+                    allA[i].style.backgroundColor = "";
+                }
+                allA[index].style.backgroundColor = "black";
+            }
+
+            var timer;
+            //创建函数，用来开启自动切换图片
+            function autoChange() {
+                timer = setInterval(() => {
+                    //使索引自增
+                    index++;
+                    index %= imgArr.length ;
+                    move(imgList, "left", -520 * index, 30, function () {
+                        setA();
+                     });
+
+                }, 3000);
+            }
+        };
+
+
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <ul id="imgList">
+            <li>
+                <img src="../8切换图片/img/1.jpg">
+            </li>
+            <li>
+                <img src="../8切换图片/img/2.jpg">
+            </li>
+            <li>
+                <img src="../8切换图片/img/3.jpg">
+            </li>
+            <li>
+                <img src="../8切换图片/img/4.jpg">
+            </li>
+            <li>
+                <img src="../8切换图片/img/5.jpg">
+            </li>
+            <li>
+                <img src="../8切换图片/img/1.jpg">
+            </li>
+        </ul>
+
+        <div id="navDiv">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+</body>
+
+</html>

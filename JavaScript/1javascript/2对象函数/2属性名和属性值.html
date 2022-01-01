@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+     <script>
+         
+         var obj = new Object();
+        // 属性名不强制要求遵守标识符的规范
+        //     如果要使用特殊的属性名，不能用. 方式操作
+        //         使用如下方式：对象["属性名"]=属性值
+
+         obj["123"]=345;
+         obj.name="jj";
+         console.log(obj["123"]);
+        //  使用[]操作属性，更加灵活
+        //     在[]中可以直接传递一个变量，这样变量值是多少就会读取那个属性
+        var n = 123
+        console.log(obj[n]);
+
+        // JS对象的属性值可以是任意属性的数据类型
+                // 也可以是一个对象
+
+            // in运算符   
+            //     通过改运算符可以检查一个对象中是否含有指定的属性
+            //         如果有则返回true，没有则返回false
+            //     语法：  "属性名"  in 对象
+        alert("name" in obj);
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            var btn01 = document.getElementById("btn01");
+            var btn02 = document.getElementById("btn02");
+
+            
+            btn01.onclick = function () {
+                move(box1,400,5);
+            };
+
+
+            btn02.onclick = function () {
+                move(box1,0,5);
+
+            };
+
+        };
+        //创建函数
+        var timer;
+        /**
+         * obj:要执行的对象
+         * target:执行的位置
+         * speed:移动的速度
+         * */
+        function move(obj,target,speed){
+            clearInterval(timer);
+            var current = parseInt(getStyle(obj, "left"));
+            if(current > target){
+                speed = -speed;
+            }
+                timer = setInterval(() => {
+                    var oldValue = parseInt(getStyle(obj, "left"));
+                    var newValue = oldValue + speed;
+                    if(speed<0 && newValue<target || speed>0 && newValue>target){
+                        newValue = target;
+                    }
+                    
+                    obj.style.left = newValue + "px";
+
+                    if (newValue === target) {
+                        clearInterval(timer);
+                    }
+                }, 30);
+
+        }
+
+
+        function getStyle(obj, name) {
+            if (window.getComputedStyle) {
+                return getComputedStyle(obj, null)[name];
+            } else {
+                return obj.currentStyle[name];
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn01">点击按钮后box1向右移动</button>
+    <button id="btn02">点击按钮后box1向左移动</button>
+
+    <div id="box1"></div>
+</body>
+
+</html>

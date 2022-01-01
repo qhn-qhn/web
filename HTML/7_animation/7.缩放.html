@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        .b1{
+            width: 100px;
+            height: 100px;
+            background-color: #bbffaa;
+            transition: 2s;
+
+            /* 变形的原点  默认值为中间 */
+            transform-origin:20px 20px ;
+        }
+
+    .b1:hover{
+        /* 对元素的放大缩小
+           scaleX() 水平缩放
+           scaleY() 垂直缩放
+           scaleZ()
+           scale（） 双向缩放*/
+        transform: scale(2);
+    }
+    .img-wrapper{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+    img{
+        transition: .2s;
+    }
+    .img-wrapper:hover img{
+        transform: scale(1.3);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <div class="img-wrapper">
+        <img src="/2_exercise/14复仇者联盟/img/1.jpg" alt="">
+    </div>
+</body>
+</html>

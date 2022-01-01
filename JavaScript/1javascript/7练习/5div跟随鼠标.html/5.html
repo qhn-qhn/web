@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            position: absolute;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            //使div跟随鼠标移动
+            var box1 = document.getElementById("box1");
+            document.onmousemove = function(event){
+                evevt = event||window.event;
+
+                /** 
+                 * 
+                 * clientX，clientY只相对于可见窗口
+                 * div相对于整个页面
+                 * 
+                 * pageX，pageY相对于页面  在ie8不支持
+                 * 
+                 * */
+                var left = event.pageX;
+                var top = event.pageY;
+                // var st = document.documentElemnt.scrollTop || document.body.scrollTop;
+                // var w = document.documentElemnt.scrollLeft || document.body.scrollLeft;
+
+                box1.style.left = left  +"px";
+                box1.style.top = top + "px";
+            }
+        };
+    </script>
+</head>
+<body style="height: 1000px;">
+    <div id="box1"></div>
+</body>
+</html>

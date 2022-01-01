@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[0,1,2,3,4];
+        // slice(start,end)  从数组中提取指定元素 该方法不会改变原数组，将截取的元素封装到一个新数组中返回
+        //      包含开始索引，不包含结束索引
+        //              第二个参数可以不写
+        //              多因各异传递负值，表示从后往前计算
+        var ne = arr.slice(0,2);
+        document.write(ne+"<br>");
+        document.write(arr+"<br>");
+
+
+        // splice() 删除数组的指定元素，将删除元素作为返回值返回，并向数组添加新元素
+        //   参数：第一个，表示开始的索引
+        //         第二个，表示删除的数量
+        //        第三个及以后， 表示插入的新元素，这些元素将会自动插入到开始位置索引前边
+        var ne2 = arr.splice(0,3,45);
+        document.write(arr+"<br>");
+        document.write(ne2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

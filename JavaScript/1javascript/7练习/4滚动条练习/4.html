@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #info{
+            width: 300px;
+            height: 500px;
+            background-color: pink;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+           
+            var info = document.getElementById("info");
+            var inp = document.getElementsByTagName("input");
+            /** 
+             * onscroll该事件在元素滚动时触发
+             * 
+             * */
+            info.onscroll = function(){
+                //检查滚动条是否到底
+                if(info.scrollHeight - info.scrollTop == info.clientHeight){
+                    //滚动条到底后使表单项可用
+                    /** disabled设置元素是否禁用
+                     *      true禁用，false不禁用
+                     * */
+                    inp[0].disabled = false;
+                    inp[1].disabled = false;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h3>欢迎注册</h3>
+    <p id="info">
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议
+        请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议请仔细阅读协议     
+    </p>
+    <!-- 为表单添加disabled，表单将变成不可用状态 -->
+    <input type="checkbox" disabled="disabled">同意
+    <input type="submit" value="注册" disabled="disabled">
+</body>
+</html>

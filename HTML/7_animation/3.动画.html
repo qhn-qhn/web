@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            height: 500px;
+            border-bottom: 5px pink solid;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+        .outer div{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: pink;
+            animation: ball 1s  infinite linear alternate;
+            float: left;
+        }
+        div.b2{
+            background-color: orange;
+            animation-delay: .3s;
+        }
+        div.b3{
+            background-color: yellow;
+            animation-delay: .5s;
+        }
+        div.b4{
+            background-color: green;
+            animation-delay: .7s;
+        }
+        div.b5{
+            background-color:greenyellow;
+            animation-delay: .9s;
+        }
+        div.b6{
+            background-color:skyblue;
+            animation-delay: 1.1s;
+        }
+        div.b7{
+            background-color: plum;
+            animation-delay: 1.3s;
+        }
+        @keyframes ball {
+            from{
+                margin-top: 0;
+            }
+            to{
+                margin-top: 400px;
+            }
+            /* 20%,60%,to{
+                margin-top: 400px;
+                animation-timing-function: ease-out;
+            }
+            40%{
+                margin-top: 100px;
+                animation-timing-function: ease-in;
+            }
+            80%{
+                margin-top:200px;
+                animation-timing-function: ease-in;
+            } */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="outer">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+        <div class="b5"></div>
+        <div class="b6"></div>
+        <div class="b7"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* 相邻的垂直方向的外边距会折叠
+        兄弟元素：两个正值，取大值；一正一负，取两值和；两负，取绝对值大值 */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: darkseagreen;
+            margin-bottom: 100px;
+            margin-top: 100px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: darkseagreen;
+            margin-top: 50px;
+        }
+
+/* 父子元素之间的外边距，子元素会传递给父元素（上边距）
+    父子外边距折叠会影响到页面的布局，要进行处理：
+        临时处理：加一个内边距；在父元素加一个边框。这两种方法都需要修改样式的高度或外边距
+ */
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: darkseagreen;
+            border: 1px gray solid;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: darkturquoise;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

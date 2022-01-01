@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1{
+            font-size: 50px;
+            /*  text-decoration:设置文本修饰
+                    none 什么都没有
+                    underline 下划线
+                    line-through 删除线
+                    overline 上划线 */
+        /* ie不支持颜色和样式 */
+            text-decoration: line-through pink dashed;
+        }
+        .a2{
+            width: 100px;
+            /* 多余内容显示省略号 */
+                 /* white-space设置页面如何处理空白
+                    normal 默认值
+                    nowrap 不换行
+                    pre 保留空白 与源码格式相同
+                    */
+            white-space: pre;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">今天天气真不错</div>
+    <div class="a2">asdfasdfasdflkasjflasdkfjldkashglkasdjfhdasl;gaj;sdfheoiwjaskdghasdfasdfwefasdfasdfasdfasdf</div>
+</body>
+</html>

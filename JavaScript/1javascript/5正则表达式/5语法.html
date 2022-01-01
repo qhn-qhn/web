@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //.表示任意字符
+        //  使用字面量定义正则时，\表示转义字符
+        //使用构造函数来定义正则对象，\\表示转移字符
+
+        /*
+        * \w   任意字母、数字、下划线_
+        * \W    除了字母、数字、下划线_
+        * \d    任意数字
+        * \D    除了数字
+        * \s    空格
+        * \S    除了空格
+        * \b    单词边界
+        * \B    除了单词边界
+        * */
+        var reg = /\bchild\b/;
+        var str = "hello children";
+        document.write(reg.test(str)+"<br>");
+        reg = /child/;
+        document.write(reg.test(str)+"<br>");
+
+        //去除空格  使用""替换空格
+        str = "      hello    ";
+        reg = /^\s*|\s*$/g;
+        console.log(str);
+        str = str.replace(reg,"");
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

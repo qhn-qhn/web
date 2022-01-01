@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "kljijk";
+        // 在底层以字符数组的形式保存     ["k","k","k"]
+        //可以使用数组的方式
+        document.write("字符串长度  "+str.length+"<br>");
+
+        //charAt()返回字符串指定位置的字符
+        document.write("charAt()-----"+str.charAt(2)+"<br>");
+        //charCodeAt()返回指定位置字符的Unicode编码
+        document.write("charCodeAt()-----"+str.charCodeAt(2)+"<br>");
+        //String.fromCharCode()根据字符编码晦气字符
+        document.write("String.fromCharCode()-----"+String.fromCharCode(34)+"<br>");
+        //concat()链接字符串
+
+        //indexof(x,y)检索字符串是否含有指定内容
+        //      如果有，则返回第一次出现的位置；否则，返回-1
+        //参数x：查找的内容       参数y：从第几个位置查找
+        document.write("indexof(x,y)-----"+str.indexOf("j")+"<br>");
+        //lastIndexOf()  从后往前查找指定内容
+        document.write("lastIndexOf()-----"+str.lastIndexOf("k")+"<br>");
+        //slice(x,y)截取指定内容,不会影响原字符串
+        //包括开始位置索引，不包括结束位置，第二个参数可省略
+        //传递负数从后边计算
+        document.write("slice(x,y)-----"+str.slice(1,3)+"<br>");
+        //substring(x,y)和slice()类似
+        //不同：不能接受负值，传递负值默认为0；自动调整参数位置，第二个参数小于第一个，自动交换
+        document.write("substring(x,y)-----"+str.substring(1,2)+"<br>");
+        //substr(x,y)截取字符串  x：开始位置   y：截取长度
+        document.write("substr(x,y)-----"+str.substr(1,2)+"<br>");
+        //split()将字符串拆分为数组
+        //传递一个字符串作为参数，根据该字符串拆分
+        str = "aa,dd,Ff,ss";
+        document.write("split()-----"+str.split(",")+"<br>");
+        // toUpperCase()转换为大写
+        document.write("toUpperCase()-----"+str.toUpperCase()+"<br>");
+        // toLowerCase()转换为小写
+        document.write("toLowerCase()-----"+str.toLowerCase()+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

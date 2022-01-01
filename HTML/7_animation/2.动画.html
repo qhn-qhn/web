@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .b1{
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+            margin-left: 0px;
+        }
+        .b1 div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        .b2{
+            background-color: skyblue;
+            /* 设置.b2的动画 */
+            /* animation-name: 要对当前元素生效的关键帧的名字 */
+            animation-name: test;
+            /* animation-duration: 动画执行时间*/
+            animation-duration: 2s;
+            /* animation-delay:延迟时间 */
+            animation-delay: 1s;
+            /* animation-timing-function: 执行方式 */
+            animation-timing-function: linear;
+            /* animation-iteration-count：执行次数
+                    次数
+                    infinite  无限执行 */
+            animation-iteration-count:infinite;
+            /* animation-direction:动画执行方向 
+                    normal 默认值 from到to
+                    reverse to->ftom
+                    alternate  from->to 重复执行时反向执行
+                    alternate-reverse   to->from*/
+            animation-direction:reverse ;
+            /* animation-direction: 设置动画执行状态
+                    running  默认值 动画执行
+                    paused   动画暂停 */
+
+
+            /* animation-fill-mode: 动画填充方式 
+                none  默认值  执行完毕后，回到原来的位置
+                forwards  听到最后的位置    
+                backwards  动画延时等待是，元素会处于开始位置
+                both 结合了以上两种特点*/
+            animation-fill-mode: forwards;
+
+            /* animation: 简写 */
+
+        }
+           /* 动画  与过渡类似 实现动态效果
+                    不同：过渡时在某个实行发生变化时才会触发 
+                          动画可以自动出发效果
+                
+                设置动画效果，必须设置一个关键帧 关键帧设置了动画执行的每一个步骤*/
+            @keyframes test {
+                /* from表示动画开始位 */
+                from{
+                    margin-left: 0;
+                }
+                /* to表示动画结束位 */
+                to{
+                    margin-left: 700px;
+                }
+            }
+           
+        
+        /* .b3{
+            background-color: orange;
+        } */
+        /* .b1:hover div{
+            margin-left: 700px;
+        } */
+    </style>
+    
+</head>
+<body>
+    <div class="b1">
+        <div class="b2"></div>
+        <!-- <div class="b3"></div> -->
+    </div>
+</body>
+</html>

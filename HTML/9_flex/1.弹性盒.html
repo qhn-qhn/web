@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2_exercise/css/reset.css">
+    <style>
+        ul {
+            width: 800px;
+            border: 3px pink solid;
+            /* 将ul设置弹性容器 */
+            display: flex;
+
+            /* flex-direction: 指定容器中弹性元素的排列方式
+                    row ，默认值  弹性元素在容器中水平排列（从左向右）  主轴从左向右
+                    row-reverse 弹性元素在容器中水平排列，反向
+                    column 纵向排列   上→下
+                    column-reverse 下→上 
+                    
+                主轴：弹性元素的排列方向
+                
+                侧轴：与主轴垂直的为侧轴*/
+                flex-direction: row;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+
+            /* 弹性元素属性
+                    flex-grow 指定弹性元素伸展的系数 
+                        当父元素有多余空间时，子元素如何让伸展
+                        父元素剩余空间，按照比例伸展
+
+                    flex-shrink 指定弹性元素的收缩系数
+                        当父元素的空间不足以容纳所有元素时，子元素如何收缩
+                        */
+        }
+        
+        li:nth-child(1){
+            flex-grow: 0;
+        }
+
+        li:nth-child(2) {
+            background-color: yellow;
+            flex-grow: 2;
+        }
+
+        li:nth-child(3) {
+            background-color: turquoise;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- flex 弹性盒，伸缩盒
+            是css另一种布局，主要用来代替浮动来完成页面的布局
+            使元素具有弹性，让元素可以跟随页面大小而改变
+        弹性容器
+            要使用弹性盒，必须先将元素设置为弹性容器 
+            通过display设置弹性容器
+                flex 设置块级弹性同期
+                inlin-flex 设置行级弹性容器
+            
+        弹性元素
+            弹性容器的直接子元素是弹性元素（弹性项）
+            一个元素可以同时是弹性容器和弹性元素-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>

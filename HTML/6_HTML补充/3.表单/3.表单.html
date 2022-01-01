@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form属性
+            acation 指定表单要提交服务器的地址 -->
+    <form action="target.html">
+
+        <!-- 添加表单项 服务器提交到服务器，必须指定name值-->
+        <!-- 文本框 -->
+        <input type="text" name="he">
+
+        <!-- 密码框 -->
+        <input type="password" name="sdf">
+
+        <!-- 提交按钮 -->
+        <input type="submit" value="提交按钮的文字">
+
+        <!-- 单选按钮  需要有相同的name
+                需要指定value值，传递给服务器
+            checked 可以将单元按钮设置为默认选中-->
+        <input type="radio" name="sdfd" value="a">
+        <input type="radio" name="sdfd" value="b" checked>
+
+        <!-- 多选框 -->
+        <input type="checkbox" name="test" value="q">
+        <input type="checkbox" name="test" value="w">
+        <input type="checkbox" name="test" value="e">
+        <input type="checkbox" name="test" value="r">
+
+        <!-- 下拉列表 -->
+        <select name="haha" >
+            <option value="1">a</option>
+            <option value="2">b</option>
+            <option value="3">c</option>
+        </select>
+    </form>
+</body>
+</html>

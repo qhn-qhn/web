@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            /* 设置网页的视距为800px */
+            perspective:800px;
+        }
+        .b1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin:200px auto;
+            /* 调整z轴的距离，即于人眼的距离
+                    距离越大，越近
+                z轴平移属于立体效果，默认情况下不支持透视 如果需要看见这个效果，必须设置视距 */
+                transition: 2s;
+        }
+        body:hover .b1{
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+</body>
+</html>

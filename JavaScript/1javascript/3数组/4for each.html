@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [1,2,3,4];
+        // forEach() 方法便利数组，支持IE8以上浏览器
+
+        // 需要一个函数作为参数,像这种由我们创建，但是不由我们调用的，称为回调函数
+        // 数组中有几个元素执行几次，每次执行时，浏览器会将便利到的元素以实参形式传递进来,定义形参来读取内容
+            // 浏览器会在回调函数中传递三个参数：
+            //     第一个 ： 当前正在遍历的元素
+            //     第二个 ： 当前正在遍历的索引
+            //     第三个 ： 就是正在遍历的数组
+
+        arr.forEach(function(value,index,obj){
+            document.write("value="+value+",\t");
+            document.write("index="+index+",\t");
+            document.write("obj="+obj+"<br>");
+        });
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 50px;
+        }
+        /* 对于开启了定位的元素，可以通过z-index属性来指定元素的层级，值越大，层级越高，约优先显示
+            祖先层级在高，不会盖住后代元素 */
+        .b1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+         
+        }
+        .b2{
+            width: 200px;
+            height: 200px;
+            background-color:skyblue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .b3{
+            width: 200px;
+            height: 200px;
+            background-color:yellow;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .b3{
+            width: 100px;
+            height: 100px;
+            background-color:burlywoodb;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="b1">1</div>
+    <div class="b2">2</div>
+    <div class="b3">3
+        <div class="b4">4</div>
+    </div>
+</body>
+</html>

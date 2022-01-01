@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2_exercise/css/reset.css">
+    <style>
+        ul {
+            width: 800px;
+            border: 3px pink solid;
+            /* 将ul设置弹性容器 */
+            display: flex;
+            
+        }
+
+        li {
+            width: 200px;
+            background-color: skyblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-shrink: 0;
+
+            /* flex-grow:  弹性增长系数*/
+            /* flex-shrink: 缩减系数
+                                计算方式比较复杂，根据缩减系数和大小来计算 */
+            /* flex-basis:   元素在主轴基础长度  主轴是横向则为宽度    主轴是竖向则是高度 */
+
+            /* flex 增长 缩减 长度   ：：  简写属性 
+                        initial  "flex:0 1 auto"
+                        auto "flex 1 1 auto"
+                        none "flex: 0 0 auto"  弹性元素没有缩减*/
+        }
+        li:nth-child(1){
+            /* order:  指定弹性元素的顺序 */
+            order: 2;
+        }
+
+
+        li:nth-child(2) {
+            /* align-self: 用来覆盖当前元素的align-itemsa */
+            background-color: yellow;
+        }
+
+        li:nth-child(3) {
+            background-color: turquoise;
+        }
+        li:nth-child(4) {
+            background-color: greenyellow;
+        }
+
+        li:nth-child(5) {
+            background-color:plum;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2
+        </li>
+        <li>3
+        </li>
+    </ul>
+</body>
+
+</html>

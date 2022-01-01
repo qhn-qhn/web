@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 
+        字面量   不可改变的值
+
+        变量    使用var来声明变量
+                    typeof 查看数据类型
+                    .MAX_VALUE查看数据类型最大值
+                    .MIN_VALUE查看数据类型大于0的最小值
+                    NaN  表示不是数字  使用typeof检擦NAN  会返回number
+
+                    使用js计算浮点数，可能得到不精确的值  
+     -->
+     <!-- 
+    强制转换String
+         方式一
+            b = a.toString() 强制转换类型，a.toString()不改变a的类型  
+                a为空值、undefined不可转，没有toString()方法
+        方式二 调用String（）函数    String（a）  空值、undefined可转
+      -->
+      <!-- 
+        强制转换Number
+            方式一   Number（）   字符串---/>数字 
+                                        数字--数字
+                                        其他--NaN
+                                 null---0
+                                    true--1
+                                    false--0
+                                undefined--NaN
+            方式二   parseInt（） 字符中有效的整数取出来转换为整数
+                    parseFloat（） 转换为浮点数
+       -->
+
+        <!--转Boolean
+            Boolean（）函数
+                数字---除了0和null，其余都是true
+                字符串--除了空串，其余都是true
+                Null和undefined  都是false  
+                对象也是true
+              -->
+
+
+       <!-- 进制
+              16进制0x开头
+              8进制0开头
+              二进制  0b  不是所有浏览器都支持
+
+              070可能会被当成八进制
+                解决：parseInt（a,进制）
+       -->
+</head>
+<body>
+   
+</body>
+</html>

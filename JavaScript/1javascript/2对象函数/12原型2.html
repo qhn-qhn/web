@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function My(){
+
+        }
+
+        My.prototype.name="a";
+        var mc = new My();  
+        // 使用in检查对象中是否含有某属性时，如果对象中没有但是原型中有，也会返回true
+        document.write("name" in mc);
+        // 可以使用对象的hasOwnProperty()来检查对象自身中是否有该属性
+        document.write(mc.hasOwnProperty("name"));
+        // 原型对象也是对象，所以他也有原型
+        // 当使用一个对象的属性或者方法时，会在自身寻找
+        //     自身没有，原型对象-->原型的原型-->直到找到Object的原型
+        //     Object对象的原型没有原型，若在Object中依然没有，则返回undefined
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

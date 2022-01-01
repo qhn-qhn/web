@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            width: 100px;
+            height: 100px;
+            /* background-color: skyblue; */
+
+            /* 通过渐变设置复杂的背景颜色，通过一个颜色向另一个颜色过度
+                ！！！渐变是图片，通过background-image来设置 
+                    linear-gradient（to 方向，开头颜色，结尾颜色）线性渐变，颜色沿着一条直线发生变化
+                    方向不写默认为向下
+                        xxx deg可以设置方向的度数
+                        xxx turn 表示圈
+                    颜色可以写多种
+                        也是以手动指定渐变的分布情况*/
+            background-image: linear-gradient(pink,skyblue);
+
+        }
+        .b2{
+            width: 100px;
+            height: 100px;
+            /*repeating-linear-gradient 可以平铺的线性渐变  */
+            background-image: repeating-linear-gradient(pink 10px,skyblue 20px);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <div class="b2"></div>
+</body>
+</html>

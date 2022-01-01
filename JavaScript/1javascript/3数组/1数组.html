@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 创建数组对象
+        var arr = new Array();
+        // 向数组中添加元素
+        //     数组[索引] = 值
+        arr[0] = 10;
+        arr[1] = 3;
+        // arr[100] = 0;
+        // 读取元素   数组[索引]
+        document.write(arr);
+        document.write("<br>");
+        document.write(arr[0]);
+        document.write("<br>");
+        // 获取数组长度  适用于连续的数组  非连续的数组获取的长度为索引+1
+        document.write(arr.length);
+        // 修改length
+        arr.length = 4;
+        // 向数组最后一个位置添加
+        arr[arr.length] = 0;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

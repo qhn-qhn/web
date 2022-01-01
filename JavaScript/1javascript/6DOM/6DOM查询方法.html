@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            //获取body标签
+            //var body = document.getElementsByTagName("body")[0];
+            //在document中有一个属性body，他保存的是body的引用
+            var test = document.body;
+            //document.documentElement保存的是html根标签
+            test = document.documentElement
+            /*  获取页面所有蒜素
+            *       1.document.all代表页面中所有元素
+            *       2.document.getElementsByTagName("*")
+            */
+            test = document.all;
+            test = document.getElementsByTagName("*");
+            
+            //根据class查询:document.getElementsByClassName()   IE8及以下不支持
+            test = document.getElementsByClassName("box");
+
+            // 一、document.querySelector() 
+            //  --需要一个选择器的字符串作为参数，可以根据CSS选择器来查询对象
+            //  --IE8中可以使用
+            //  --使用该方法只返回第一个符合条件的标签
+            // 二、document.querySelectorall();
+            //  --和上述方法用法一样，但是可以查询多个符合条件的标签，以数组返回
+            test = document.querySelector(".box div");
+            test = document.querySelectorall(".box div");
+        };
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+    </div>
+</body>
+</html>

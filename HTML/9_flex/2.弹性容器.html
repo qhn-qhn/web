@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2_exercise/css/reset.css">
+    <style>
+        ul {
+            width: 800px;
+            border: 3px pink solid;
+            /* 将ul设置弹性容器 */
+            display: flex;
+            /* flex-wrap:  设置元组在弹性容器中是否自动换行
+                    nowrap  默认值 不换
+                    wrap  元素沿着侧轴方向换行
+                    wrap-reverse 元素沿着侧轴反方向换行*/
+            /* flex-flow  wrap和direction的简写属性 没有顺序*/
+
+            /* justify-content: 如何分配主轴上的空白
+                    flex-start 元素沿着主轴起边排列  空白在最后
+                    flex-end    元素沿着主轴终边排列  空白在开始
+                    center    元素居中排列
+                    space-around 空白分布在每个元素两侧
+                    space-between  空白平均分布在元素之间
+                    space-evenly   空白分布在元素的单侧 */
+                justify-content: center;
+        }
+
+        li {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-shrink: 0;
+        }
+
+
+        li:nth-child(2) {
+            background-color: yellow;
+        }
+
+        li:nth-child(3) {
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>

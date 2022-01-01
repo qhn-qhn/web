@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var img1 = document.getElementById("img1");
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+
+            var timer;
+            btn1.onclick = function () {
+                //每点击一次，就是带起一次定时器，点击多次就会开启多次定时器
+
+                //在开启定时器之前，需要关闭当前元素上之前的定时器
+                clearInterval(timer);
+                var i = 1;
+                timer = setInterval(function () {
+                    i++;
+                    img1.src = "./img/" + i + ".jpg";
+                    if (i >= 5) {
+                        i = 0;
+                    }
+                }, 1000)
+            }
+            btn2.onclick = function(){
+                //可以接受任何参数，如果参数是有效的标识，则停止计时器；若无效，则什么也不做
+                clearInterval(timer);
+            }
+
+            /**第二种方法
+             * 
+             * var imgArr = ["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg"];
+             * 
+             * var index = 0;
+             * 
+             * var timer = setInterval(function(){
+                index++;
+                img1.src = imgArr[index];
+                if (index>=imgArr.length){
+                    index=0;
+                }
+             * */
+        };
+    </script>
+</head>
+
+<body>
+    <img src="./img/1.jpg" id="img1"><br>
+    <button id="btn1">开始</button>
+    <button id="btn2">停止</button>
+
+</body>
+
+</html>

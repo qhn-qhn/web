@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            width: 256px;
+            height: 256px;
+            margin: 0 auto;
+            background-image: url("./img/bg2.png");
+            background-position: 0 0;
+            animation-name: identifier;
+            animation-duration: 0.5s;
+            animation-timing-function: steps(6);
+            animation-iteration-count: infinite;
+        }
+        @keyframes identifier {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1536px  0;
+            }
+        }
+        .box{
+            width: 65.8px;
+            height: 84.8px;
+            margin: 100px auto;
+            background-image: url("./img/u=985497213\,2064590390&fm=26&gp=0.gif");
+            background-position: 0 -90px;
+            animation-name:play;
+            animation-duration: 0.5s;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+        }
+        @keyframes play {
+            from{
+                background-position: 658px -90px;
+            }
+            to{
+                background-position: 0 -90px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <div class="box"></div>
+</body>
+</html>

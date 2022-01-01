@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            width: 132px;
+            height: 271px;
+            margin: 0 auto;
+            background-image: url(./img/bigtap-mitu-queue-big.png);
+            background-position: 0 0;
+            transition: 0.2s steps(3);
+        }
+        .b1:hover{
+            background-position: -396px 0;
+        }
+        .b2{
+            width: 132px;
+            height: 271px;
+            margin: 50px auto;
+            background-image: url(./img/bigtap-mitu-queue-big.png);
+            background-position: 0 0;
+            animation-name: identifier;
+            animation-duration: 0.3s;
+            animation-timing-function: steps(3);
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes identifier {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -396px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <div class="b2"></div>
+</body>
+</html>

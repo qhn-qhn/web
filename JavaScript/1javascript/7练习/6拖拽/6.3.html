@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /**
+             * 拖拽box1元素
+             * 1、onmousedown 当鼠标按下时
+             * 2、onmousemove 当鼠标移动时
+             * 3、onmouseup 当鼠标松开时
+             * */
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            drag(box1);
+            drag(box2);
+        }
+
+        function drag(obj) {
+            obj.onmousedown = function (event) {
+                //设置box1捕获所有鼠标按下的事件，只有ie支持
+                if (obj.setCapture) {
+                    obj.setCapture();
+                }
+
+                event = event || window.event;
+                var ol = event.clientX - obj.offsetLeft;
+                var ot = event.clientY - obj.offsetTop;
+                //div偏移量  鼠标.clientX - 元素.offsetLeft
+                //div偏移量  鼠标.clientY - 元素.offsetTop
+
+
+                document.onmousemove = function (event) {
+                    event = event || window.event;
+                    var left = event.clientX - ol;
+                    var top = event.clientY - ot;
+
+                    obj.style.left = left + "px";
+                    obj.style.top = top + "px";
+                };
+                document.onmouseup = function () {
+                    //取消鼠标移动事件
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                    //取消捕获
+                    if (obj.releastCapture) {
+                        obj.releastCapture();
+                    }
+
+                };
+                return false;
+            };
+        }
+
+    </script>
+</head>
+
+<body>
+    sadfsf
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+
+</html>

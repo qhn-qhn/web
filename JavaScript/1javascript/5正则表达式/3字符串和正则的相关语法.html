@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "1a2c3b";
+        // split()字符串拆分为数组
+        // 可以传递正则表达式拆分
+
+        //根据任意字母拆分
+        var reg = /[A-z]/;
+        document.write(str.split(reg)+"<br>");
+
+        // search() 搜索字符串中是否含有指定内容的值  搜索到指定内容返回第一次出现位置，否则返回-1
+        //search() 不能全局查找，只能返回第一个
+        str = "hello abc he aec dsf "
+        reg = /a[be]c/;
+        document.write(str.search(reg)+"<br>");
+
+        //match()根据正则表达式将符合条件内容提取  将匹配内容封装到数组返回
+        //默认情况下只会找到第一个，设置为全局匹配模式
+        reg = /a[be]c/g;
+        document.write(str.match(reg)+"<br>");
+
+        //raplace(x，y)将指定内容替换为新的内容    x被替换   y新内容   默认只替换第一个
+        document.write(str.replace(reg,"ddd")+"<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

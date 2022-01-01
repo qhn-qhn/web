@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css原生也支持变量的设置 */
+        html{
+            /* 格式：--变量名 兼容性差*/
+            --color:pink;
+            --length:200px;
+        }
+        .b1{
+            /* width: var(--length); */
+            /* calc（）计算函数 */
+            width: calc(200px/2);
+            height: var(--length);
+            /* 使用变量 */
+            background-color: var(--color);
+        }
+        .b2{
+            width: 100px;
+            height: 100px;
+            color: var(--color);
+        }
+        .b3{
+            width: 100px;
+            height: 100px;
+            border:var(--color) 5px solid;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- less是css的预处理语言
+            less是css的增强版 通过less可以编写更少的代码实现更强大的样式 
+            less语法于css大体一致，但是增添了许多对css的扩展
+            所以浏览器无法执行less代码，要执行必须将less转换为css代码
+                    见css文件夹-->
+    <div class="b1">111</div>
+    <div class="b2">111</div>
+    <div class="b3">111</div>
+</body>
+
+</html>

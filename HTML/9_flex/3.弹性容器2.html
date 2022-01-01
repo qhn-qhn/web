@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/2_exercise/css/reset.css">
+    <style>
+        ul {
+            width: 600px;
+            border: 3px pink solid;
+            /* 将ul设置弹性容器 */
+            display: flex;
+            flex-flow: row wrap;
+            /* justify  表示主轴   align表示侧轴 */
+            /* align-items  元素在侧轴上对齐
+                    stretch 默认值，每行元素设置为相同的值
+                    flex-start 元素不会拉伸，沿着侧轴起边对齐
+                    flex-start 沿着侧轴终边对齐
+                    center  居中对齐
+                    baseli 基线对齐 */
+            align-items: center;
+
+            /* align-content: 侧轴空白的分布*/
+
+        }
+
+        li {
+            width: 200px;
+            background-color: skyblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-shrink: 0;
+        }
+
+
+        li:nth-child(2) {
+            /* align-self: 用来覆盖当前元素的align-itemsa */
+            background-color: yellow;
+        }
+
+        li:nth-child(3) {
+            background-color: turquoise;
+        }
+        li:nth-child(4) {
+            background-color: greenyellow;
+        }
+
+        li:nth-child(5) {
+            background-color:plum;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2
+            <div>2</div>
+        </li>
+        <li>3
+            <div>3</div>
+            <div>3</div>
+        </li>
+        <li>1</li>
+        <li>2
+            <div>2</div>
+        </li>
+    </ul>
+</body>
+
+</html>

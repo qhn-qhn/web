@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+
+        .news{
+            width: 300px;
+            height: 323px;
+            background-color: azure;
+            margin: 50px auto;
+            border-top: 1px #dddddd ridge;
+            border-bottom: 1px #dddddd ridge;
+        }
+        .news_title{
+            height: 42px;
+            line-height: 42px;
+        }
+        .news_title h2{
+            font-size: 16px;
+            display: inline-block;
+            border-top: 1px red ridge;
+            font-weight: bold;
+            margin-top: -1px;
+        }
+        a{
+            color: rgb(83, 81, 81);
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(199, 15, 15);
+        } 
+
+        .news_img{
+            height: 150px;
+            margin-bottom: 13px;
+        }
+        .news_img h3{
+            height: 40px;
+            color: seashell;
+            font-weight: bold;
+            line-height: 40px;
+            margin-top: -35px;
+            padding-left: 40px;
+        }
+
+        .news_list{
+            height: 120px;
+            padding-left: 5px;
+            font-size: 14px;
+        }
+        .news_list li::before{
+            content: "●";
+            color: rgb(170, 169, 169);
+            font-size: 12px;
+            margin-right: 4px;
+        }
+        .news_list li{
+            height: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="news">
+        <div class="news_title">
+            <h2 class="title">
+                <a href="javascript" class="fon1">体育</a>
+            </h2>
+        </div>
+
+        <div class="news_img">
+            <a href="javascript">
+                <img class="img" src="./img/1.jpeg">
+                <h3>费德勒首负迪米 扶额摇头不满发挥</h3>
+            </a>
+        </div>
+        
+        <ul class="news_list">
+            <li class="cum">
+                <a href="javascript" class="link">乔治:我爱LA 喜欢和LBJ一起打篮球</a>
+            </li>
+            <li class="cum">
+                <a href="javascript" class="link">格林:3年前降薪就在等KD 特质T恤嘲讽LBJ</a>
+            </li>
+            <li class="cum">
+                <a href="javascript" class="link">塔克40000双鞋让保罗羡慕嫉妒 乔丹被震惊</a>
+            </li>
+            <li class="cum">
+                <a href="javascript" class="link">CBA下季新赛制:常规赛4组循环 增至46轮</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

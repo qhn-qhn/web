@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮练习-解决闪的问题</title>
+    <style>
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url("img/btn.png");
+        }
+        a:hover{
+            background-position: -93px 0;
+            background-image: url("img/btn.png");
+        }
+        a:active{
+            background-position: -186px 0;
+            background-image: url("img/btn.png");
+        }
+        /* 解决图片闪烁的问题，可以将多个图片保存到一个图片中
+            通过调整background-position显示不同的图片
+            应用十分广泛 被称为CSS-Sprit  这种图片被称为雪碧图
+        雪碧图使用步骤
+            确定用的图标，测量图标的大小，根据测量结果创建元素，将雪碧图设置为背景图片，设置偏移量显示正确图片
+                雪碧图特点：一次性将多个图片加载进页面 加快访问速度*/
+        .b1{
+            width: 42px;
+            height: 30px;
+            background-image: url("img/amazon-sprite_.png");
+            background-position: -58px -338px;
+        }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+    <a href="#"></a>
+</body>
+</html>
