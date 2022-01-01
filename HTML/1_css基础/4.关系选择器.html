@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            子元素选择器
+                作用：选择指定父元素的指定子元素
+                语法：父元素 > 子元素{}
+        */
+        div > span{
+            color: red;
+        }
+        /* 
+            后代元素选择器
+                作用：选择指定元素的后代元素
+                语法：祖先 后代{}
+        */
+        div span{
+            color: skyblue;
+        }
+        /* 
+            选择下一个兄弟
+                语法：前一个 + 后一个
+        */
+        p + span{
+            color: greenyellow;
+        }
+         /* 
+            选择下边兄弟
+                语法：前一个 ~ 后一个
+        */
+    </style>
+</head>
+<body>
+    <!-- 
+        父元素
+        子元素
+        祖先元素
+        后代元素
+        兄弟元素
+     -->
+    <div>
+        div
+        <p>
+            div.p 
+            <span>div.p.span</span>
+        </p>
+
+        <span>div.span1</span>
+        <span>div.span2</span>
+    </div>
+</body>
+</html>

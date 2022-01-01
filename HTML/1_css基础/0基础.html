@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            css编写位置
+                一、内部样式表
+        */
+        p{
+            color: skyblue;
+        }
+    </style>
+    <!-- 
+        css编写位置
+            三、外部样式表
+                通过<link>标签来引用样式表
+                将样式表写到外部css文件中，可以使用浏览器的缓存机制，从而加快网页的加载速度
+     -->
+     <link rel="stylesheet" href="../2.css">
+</head>
+<body>
+    <p>hahahahahahaha</p>
+    <!-- 
+        css 编写位置
+            二、内联样式、行内样式
+                只能对一个标签生效，无法对多个标签生效
+     -->
+     <h1 style="color: red;">hhhhhhhhh</h1>
+</body>
+</html>

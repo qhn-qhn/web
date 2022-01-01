@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+           
+
+            伪类选择器（不存在的类，特殊的类）
+                伪类描述一个元素的特殊状态
+                    例如：一个元素，被点击的元素，鼠标移入的元素
+                语法：一般是：开头
+        */
+        /* 
+            基于所有元素
+                :first-child:第一个
+                :last-child:最后一个
+                :nth-child(n):指定第n个
+                    n：全选
+                    2n（even）:选择偶数位
+                    2n+1（odd）：奇数位
+
+            基于同类型元素
+                :first-of-type
+                :last-of-type
+                :nth-last-of-type()
+
+            :not()否定伪类，从选择器提出符合条件的元素
+        */
+        ul>:first-child{
+            color: red;
+        }
+        ul>li:first-of-type{
+            color: skyblue;
+        }
+        ul>li:not(:nth-child(3)){
+            color: slateblue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <span>0</span>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>
