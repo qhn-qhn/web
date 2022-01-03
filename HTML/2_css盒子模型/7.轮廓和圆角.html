@@ -10,7 +10,7 @@
             height: 100px;
             background-color: orchid;
             /* border边框会改变其他元素位置，
-            outline表示轮廓，和boeder用法相同，不会改变 */
+                outline表示轮廓，和boeder用法相同，不会改变元素位置 不影响可见框的大小*/
             /* border: red 10px solid; */
             outline: red 10px solid;
             /*改变width和height的计算方式
@@ -25,9 +25,18 @@
             box-shadow: 10px 10px 20px orange;
 
             /* border-radius设置圆角 */
-            /* border-radius:值/值表示每个角的形状 */
+            /* border-radius:值/值表示每个角的形状 
+                圆角表示设置的圆的半径
+                    左上 右上 右下 左下
+                    左上 右上/左下 右下   
+                    左上/右下 右上/左下     
+            */
+            /* border-radius: 20px / 30px; */
             border-radius: 20px 30px;
-            border-top-left-radius: 10px 20px;
+            /* border-top-left-radius: 10px 20px; */
+            /* border-top-right-radius: ;
+            border-bottom-left-radius: ;
+            border-bottom-right-radius: ; */
         }
     </style>
 </head>

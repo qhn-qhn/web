@@ -31,25 +31,29 @@
             animation-delay: 1s;
             /* animation-timing-function: 执行方式 */
             animation-timing-function: linear;
+           
             /* animation-iteration-count：执行次数
                     次数
                     infinite  无限执行 */
             animation-iteration-count:infinite;
+            
             /* animation-direction:动画执行方向 
                     normal 默认值 from到to
                     reverse to->ftom
                     alternate  from->to 重复执行时反向执行
                     alternate-reverse   to->from*/
             animation-direction:reverse ;
-            /* animation-direction: 设置动画执行状态
+
+            animation-play-state: running;
+            /* animation-play-state: 设置动画执行状态
                     running  默认值 动画执行
                     paused   动画暂停 */
 
 
             /* animation-fill-mode: 动画填充方式 
                 none  默认值  执行完毕后，回到原来的位置
-                forwards  听到最后的位置    
-                backwards  动画延时等待是，元素会处于开始位置
+                forwards  停到最后的位置    
+                backwards  动画延时等待时，元素会处于开始位置
                 both 结合了以上两种特点*/
             animation-fill-mode: forwards;
 

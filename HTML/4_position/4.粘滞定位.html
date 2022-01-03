@@ -1,1 +1,28 @@
-<!-- 滚动到一定位置不会改变位置，和相对定位差不多 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 滚动到一定位置不会改变位置，和相对定位差不多
+                stickly 元素的粘滞定位
+        */
+        body{
+            height: 10000px;
+        }
+        #b1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px auto;
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="b1"></div>
+</body>
+</html>

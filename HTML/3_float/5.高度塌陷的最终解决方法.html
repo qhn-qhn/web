@@ -14,9 +14,17 @@
             background-color: skyblue;
             float: left;
         }
-        /* .box3{
+        /* 
+           一、添加一个子元素，设置clear属性
+            .box3{
             clear: both;
-        } */
+            }
+         */
+
+         /* 
+            二、通过伪元素在父元素中添加一个标签，并设置clear属性
+                    ::after添加内容为行内元素
+         */
         .box1::after{
             content: '';
             display: block;
@@ -27,7 +35,7 @@
 <body>
     <div class="box1">
         <div class="box2"></div>
-        <!-- <div class="box3"></div> -->
+        <div class="box3"></div>
     </div>
 </body>
 </html>
